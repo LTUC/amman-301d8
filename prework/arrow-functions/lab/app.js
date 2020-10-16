@@ -206,3 +206,7 @@ console.log(joe.scopeArrow());
 // widonw (which is an object)
 // 3. Explain why "this" is different when an arrow function is used.
 // doesn't have its own this scope, it takes the this value which refered to the closing content
+
+
+
+//comment for test sth
