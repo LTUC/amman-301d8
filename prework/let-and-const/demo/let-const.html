@@ -13,6 +13,27 @@
       <p>The best way to get a basic understanding of these types of variable declarations is to see them in action. Follow the instructions below to enter the following code snippets into the console and then interact with them.</p>
       <p>But first, a quick refresher on scope.<p>
       <pre><code>
+        <script>
+var global = 'I am a global variable';
+function scopeMaker() {
+  var local = 'I am a local variable.'
+  console.log(global, 'logged from inside scopeMaker().')
+  console.log(local, 'logged from inside scopeMaker().')
+}
+scopeMaker();
+console.log(global);
+//console.log(local);
+
+const anotherGlobal = true;
+
+if(anotherGlobal) {
+  console.log('Do global variables declared with const behave like other global variables with respect to scope?', anotherGlobal);
+  let anotherLocal = 'This is a local variable declared with let';
+  console.log(anotherLocal);
+}
+anotherGlobal = 'foo';
+console.log(anotherLocal);
+        </script>
 // Open your JavaScript console.
 // Enter the following line of code:
 
