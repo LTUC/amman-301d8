@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <h1>My Grocery List</h1>
+    <p><a href="/">Home</a></p>
+    <ul>
+      <% let arr = arrayOfItems; %>
+      <% arr.forEach(item => { %>
+        <li><%= item %></li>
+      <% }) %>
+
+      <ul>
+        <% groceryObjects.forEach(item => { %>
+          <p>Item: <%= item.name %></p>
+          <p>And I need <%= item.quantity %> of these</p>
+        <% }) %>
+      </ul>
+
+    </ul>
+    <!-- <ul>
+      <li>Apples</li>
+      <li>Pears</li>
+      <li>Bananas</li>
+    </ul> -->
+  </body>
+</html>
