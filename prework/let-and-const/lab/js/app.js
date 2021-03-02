@@ -48,9 +48,7 @@ function displayPics(){
   }
 }
 
-const has='has';
-const vote='votes in';
-const view='views';
+
 function handleClick(event) {
   if (event.target.id === 'image_container') {
     return alert('Be sure to click directly on an image!!');
@@ -67,7 +65,7 @@ function handleClick(event) {
       
       
       allProducts[i].votes += 1;
-      console.log(event.target.id + has  + allProducts[i].votes + vote + allProducts[i].views + view);
+      console.log(`${event.target.id } has  ${allProducts[i].votes}  vote  ${allProducts[i].views} view `);
     }
   }
   localStorage.busmall = JSON.stringify(allProducts);
@@ -78,7 +76,7 @@ function handleClick(event) {
 function showList() {
   for(var i = 0; i < allProducts.length; i++) {
     const liEl = document.createElement('li');
-    liEl.textContent = allProducts[i].name + has + allProducts[i].votes + vote + allProducts[i].views + view;
+    liEl.textContent = ` ${allProducts[i].name}  has  ${allProducts[i].votes}  vote  ${allProducts[i].views}  view `;
     list.appendChild(liEl);
   }
 }
